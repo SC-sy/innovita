@@ -5,106 +5,32 @@ import { AiFillHeart } from "react-icons/ai"
 import { BsChatDots, BsTrash3 } from "react-icons/bs"
 import { ImMusic } from "react-icons/im"
 import moment from "moment"
-// import { useUser } from "@/app/context/user"
+
 import { useEffect, useState } from "react"
 import { BiLoaderCircle } from "react-icons/bi"
 import ClientOnly from "../clientOnly"
-import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
-// import { useLikeStore } from "@/app/stores/like"
-// import { useCommentStore } from "@/app/stores/comment"
-// import { useGeneralStore } from "@/app/stores/general"
+
 import { useRouter } from "next/navigation"
-// import useIsLiked from "@/app/hooks/useIsLiked"
-// import useCreateLike from "@/app/hooks/useCreateLike"
-// import useDeleteLike from "@/app/hooks/useDeleteLike"
-// import useDeletePostById from "@/app/hooks/useDeletePostById"
+
 import { CommentsHeaderCompTypes } from "@/app/types"
 
 export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes) {
 
-    // let { setLikesByPost, likesByPost } = useLikeStore()
-    // let { commentsByPost, setCommentsByPost } = useCommentStore()
-    // let { setIsLoginOpen } = useGeneralStore()
-
-    // const contextUser = useUser()
     const router = useRouter()
     const [hasClickedLike, setHasClickedLike] = useState<boolean>(false)
     const [isDeleteing, setIsDeleteing] = useState<boolean>(false)
     const [userLiked, setUserLiked] = useState<boolean>(false)
 
-    // useEffect(() => { 
-    //     setCommentsByPost(params?.postId) 
-    //     setLikesByPost(params?.postId)
-    // }, [post])
-    // useEffect(() => { hasUserLikedPost() }, [likesByPost])
-    
-    // const hasUserLikedPost = () => {
-    //     if (likesByPost.length < 1 || !contextUser?.user?.id) {
-    //         setUserLiked(false)
-    //         return
-    //     }
-    //     let res = useIsLiked(contextUser.user.id, params.postId, likesByPost)
-    //     setUserLiked(res ? true : false)
-    // }
-
-    // const like = async () => {
-    //     try {
-    //         setHasClickedLike(true)
-    //         await useCreateLike(contextUser?.user?.id || '', params.postId)
-    //         setLikesByPost(params.postId)
-    //         setHasClickedLike(false)
-    //     } catch (error) {
-    //         console.log(error)
-    //         alert(error)
-    //         setHasClickedLike(false)
-    //     }
-    // }
-
-    // const unlike = async (id: string) => {
-    //     try {
-    //         setHasClickedLike(true)
-    //         await useDeleteLike(id)
-    //         setLikesByPost(params.postId)
-    //         setHasClickedLike(false)
-    //     } catch (error) {
-    //         console.log(error)
-    //         alert(error)
-    //         setHasClickedLike(false)
-    //     }
-    // }
+   
 
     const likeOrUnlike = () => {
         console.log('like or unlike')
-    //     if (!contextUser?.user) return setIsLoginOpen(true)
-
-    //     let res = useIsLiked(contextUser.user.id, params.postId, likesByPost)
-    //     if (!res) {
-    //         like()
-    //     } else {
-    //         likesByPost.forEach(like => {
-    //             if (contextUser?.user?.id && contextUser.user.id == like.user_id && like.post_id == params.postId) {
-    //                 unlike(like.id) 
-    //             }
-    //         })
-    //     }
+       
     }
 
     const deletePost =  () => {
         console.log('deletePost');
-    //     let res = confirm('Are you sure you want to delete this post?')
-    //     if (!res) return
-
-    //     setIsDeleteing(true)
-
-    //     try {
-    //         await useDeletePostById(params?.postId, post?.video_url)
-    //         router.push(`/profile/${params.userId}`)
-    //         setIsDeleteing(false)
-    //     } catch (error) {
-    //         console.log(error)
-    //         setIsDeleteing(false)
-    //         alert(error)
-    //     }
+    
     }
     return (
         <>
@@ -112,7 +38,7 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
                 <div className="flex items-center">
                     <Link href={`/profile/${post?.user_id}`}>
                         {post?.profile.image ? (
-                            <img className="rounded-full lg:mx-0 mx-auto" width="40" src={useCreateBucketUrl(post?.profile.image)} />
+                            <img className="rounded-full lg:mx-0 mx-auto" width="40" src={(post?.profile.image)} />
                         ) : (
                             <div className="w-[40px] h-[40px] bg-gray-200 rounded-full"></div>
                         )}

@@ -3,9 +3,9 @@ import { usePathname } from "next/navigation"
 import MenuItem from "./MenuItem"
 import MenuItemFollow from "./MenuItemFollow"
 import { useEffect } from "react"
-// import { useUser } from "@/app/context/user"
+
 import ClientOnly from "@/app/components/clientOnly"
-// import { useGeneralStore } from "@/app/stores/general"
+
 
 export default function SideNavMain() {
 

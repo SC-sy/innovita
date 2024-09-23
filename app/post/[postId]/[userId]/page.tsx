@@ -9,26 +9,17 @@ import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 import { useRouter } from "next/navigation"
 // import ClientOnly from "@/app/components/ClientOnly"
 import { PostPageTypes } from "@/app/types"
-// import { usePostStore } from "@/app/stores/post"
-// import { useLikeStore } from "@/app/stores/like"
-// import { useCommentStore } from "@/app/stores/comment"
-import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
+
+
 import ClientOnly from "@/app/components/clientOnly"
 
 export default function Post({ params }: PostPageTypes) {
 
-    // let { postById, postsByUser, setPostById, setPostsByUser } = usePostStore()
-    // let { setLikesByPost } = useLikeStore()
-    // let { setCommentsByPost } = useCommentStore()
+   
 
     const router = useRouter()
 
-    // useEffect(() => { 
-    //     setPostById(params.postId)
-    //     setCommentsByPost(params.postId) 
-    //     setLikesByPost(params.postId)
-    //     setPostsByUser(params.userId) 
-    // }, [])
+    
  const postById={
     id:'1234',
     user_id :'7890',

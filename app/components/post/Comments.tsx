@@ -1,13 +1,11 @@
 import { useState } from "react"
 import SingleComment from "./SingleComment"
-// import { useUser } from "@/app/context/user"
+
 import { BiLoaderCircle } from "react-icons/bi"
 import ClientOnly from "../clientOnly"
-// import { useCommentStore } from "@/app/stores/comment"
-// import useCreateComment from '@/app/hooks/useCreateComment' 
-// import { useGeneralStore } from "@/app/stores/general"
+
 import { CommentsCompTypes } from "@/app/types"
-// import { console } from "inspector"
+
 
 export default function Comments({ params }: CommentsCompTypes) {
 const commentsByPost=[
@@ -24,28 +22,15 @@ const commentsByPost=[
    }
 }
 ]
-    // let { commentsByPost, setCommentsByPost } = useCommentStore()
-    // let { setIsLoginOpen } = useGeneralStore()
-
-    // const contextUser = useUser()
+   
     const [comment, setComment] = useState<string>('')
     const [inputFocused, setInputFocused] = useState<boolean>(false)
     const [isUploading, setIsUploading] = useState<boolean>(false)
 
     const addComment = () => {
         console.log("addComment")
-    //     if (!contextUser?.user) return setIsLoginOpen(true)
+   
 
-    //     try {
-    //         setIsUploading(true)
-    //         await useCreateComment(contextUser?.user?.id, params?.postId, comment)
-    //         setCommentsByPost(params?.postId)
-    //         setComment('')
-    //         setIsUploading(false)
-    //     } catch (error) {
-    //         console.log(error)
-    //         alert(error)
-    //     }
     }
 
     return (

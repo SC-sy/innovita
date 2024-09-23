@@ -1,14 +1,11 @@
 import TextInput from "../TextInput";
 import { useState } from "react";
 import { ShowErrorObject } from "@/app/types";
-// import { useUser } from "@/app/context/user";
-// import { useGeneralStore } from "@/app/stores/general";
+
 import { BiLoaderCircle } from "react-icons/bi";
 
 export default function Login() {
-    // let { setIsLoginOpen } = useGeneralStore();
 
-    // const contextUser = useUser()
 
     const [loading, setLoading] = useState<boolean>(false);
     const [email, setEmail] = useState<string | ''>('');
@@ -22,35 +19,8 @@ export default function Login() {
         return ''
     }
 
-    // const validate = () => {
-    //     setError(null)
-    //     let isError = false
-
-    //     if (!email) {
-    //         setError({ type: 'email', message: 'An Email is required'})
-    //         isError = true
-    //     } else if (!password) {
-    //         setError({ type: 'password', message: 'A Password is required'})
-    //         isError = true
-    //     }
-    //     return isError
-    // }
-
-    const login = async () => {
-    //     let isError = validate()
-    //     if (isError) return
-    //     if (!contextUser) return
-
-    //     try {
-    //         setLoading(true)
-    //         await contextUser.login(email, password)
-    //         setLoading(false)
-    //         setIsLoginOpen(false)
-    //     } catch (error) {
-    //         console.log(error)
-    //         setLoading(false)
-    //         alert(error)
-    //     }
+    const login =  () => {
+  console.log('login');
     }
 
     return (
