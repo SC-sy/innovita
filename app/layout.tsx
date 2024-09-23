@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
+import AuthOverlay from "./components/AuthOverlay";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -22,7 +23,8 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 }>) {
   return (
     <html lang="en">
-      <body> {children} </body>
+      <body>
+        <AuthOverlay/> {children} </body>
     </html>
   );
 }

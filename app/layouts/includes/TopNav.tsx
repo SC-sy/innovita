@@ -20,7 +20,7 @@ return (
             <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}>
 
                 <Link href="/">
-                    <img className="min-w-[115px] w-[115px]" src="image/NNOVITA__4_-removebg-preview.png"/>
+                    <img className="min-w-[115px] w-[115px]" src="/image/iii.png"/>
                 </Link>
                 <div className="relative hidden md:flex items-center justify-end bg-[#F1F1F2] p-1 rounded-full max-w-[430px] w-full">
                 <input  type="text" onChange={handleSearchName} className="w-full pl-3 my-2 bg-transparent placeholder-[#838383] text-[15px] focus:outline-none"

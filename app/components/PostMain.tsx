@@ -5,7 +5,6 @@ import { ImMusic } from "react-icons/im"
 import Link from "next/link"
 import { useEffect } from "react"
 import PostMainLikes from "./PostMainLikes"
-// import useCreateBucketUrl from "../hooks/useCreateBucketUrl"
 import { PostMainCompTypes } from "../types"
 
 export default function PostMain({ post }: PostMainCompTypes) {
@@ -58,12 +57,12 @@ export default function PostMain({ post }: PostMainCompTypes) {
                                 controls
                                 muted
                                 className="rounded-xl object-cover mx-auto h-full" 
-                                src={(post?.video_url)}
+                                src={post?.video_url}
                             />
                             <img 
                                 className="absolute right-2 bottom-10" 
                                 width="90" 
-                                src="/images/tiktok-logo-white.png"
+                                src="/images/iii.png"
                             />
                         </div>
                         

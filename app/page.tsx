@@ -12,9 +12,13 @@ export default function Home() {
         
           <PostMain post={{
           id:'1234',
-           user_id :'7890', video_url:'/beach.mp4',text:'this is some text',created_at:'date here',
+           user_id :'7890',
+            video_url:'/kaalu.mp4',
+           text:'this is some text',
+           created_at:'date here',
           profile:{
-            user_id:'4567',name:'user-1',image:'https://placehold.co/100'
+            user_id:'4567',name:'user-1',
+            image:'https://placehold.co/100'
           }
          }}/>
            </ClientOnly>
